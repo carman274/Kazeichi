@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kazeichi</title>
+    <link rel="icon" href="assets/images/Kazeichi.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="css/customize.css" />
+  </head>
+  <body>
+    <div class="container mx-auto px-4">
+      <div
+        class="block max-w-sm bg-neutral-50 mx-auto lg:max-w-lg my-10 rounded-xl shadow-lg px-4"
+      >
+        <!-- Tabs -->
+        <div class="flex justify-center pt-10">
+          <div
+            class="flex bg-[#DCD1C3] rounded-full shadow-inner px-2 py-2 space-x-3"
+          >
+            <!-- Tab 1 -->
+            <button
+              data-tab="Terms"
+              class="flex items-center px-4 py-1.5 font-medium rounded-full focus:outline-none hover:bg-[#B29784] active:bg-[#B29784]"
+              onclick="changeActiveTab(this)"
+            >
+              Terms
+            </button>
+            <!-- Tab 2 -->
+            <button
+              data-tab="Profile"
+              class="flex items-center px-4 py-1.5 font-medium bg-[#B29784] rounded-full focus:outline-none"
+              onclick="changeActiveTab(this)"
+            >
+              Profile
+            </button>
+            <!-- Tab 3 -->
+            <button
+              data-tab="Prices"
+              class="flex items-center px-4 py-1.5 font-medium rounded-full focus:outline-none hover:bg-[#B29784] active:bg-[#B29784]"
+              onclick="changeActiveTab(this)"
+            >
+              Price
+            </button>
+          </div>
+        </div>
+        <!-- Terms -->
+        <div id="Terms" class="hidden pb-4">
+          <!-- Header Terms -->
+          <div class="flex flex-col items-center pt-10">
+            <h5 class="athiti mb-1 text-xl font-medium text-black text-center">
+              เงื่อนไข และข้อตกลง
+            </h5>
+            <span class="text-sm text-gray-500">Terms and Conditions</span>
+          </div>
+          <div class="text-start athiti max-w-sm mx-auto py-4 px-4">
+            <ul class="list-inside list-disc md:list-disc">
+              <li>จำนวนงานต่อคิว: รับงานได้ 2-3 งาน ต่อ 1 คิว</li>
+              <li>
+                ประเภทงาน: รับวาดภาพตัวละคร Full Body ในรูปแบบ Feral และ Animal
+                เท่านั้น
+              </li>
+              <li>
+                ถนัดวาดเฟอร์รี่ทุกชนิด ยกเว้นกลุ่มสัตว์เลื้อยคลาน
+                <br />(วาดมังกรได้)
+              </li>
+              <li>
+                ระยะเวลาในการทำงาน: ใช้เวลาในการสร้างสรรค์ผลงานประมาณ 1-7 วัน
+                ขึ้นอยู่กับความซับซ้อนของงาน
+              </li>
+              <li>
+                การแก้ไขงาน: ลูกค้าสามารถขอแก้ไขงานได้สูงสุด 2 ครั้ง
+                หากเกิดข้อผิดพลาดจากทางผู้วาด สามารถแก้ไขได้จนกว่าลูกค้าจะพอใจ
+              </li>
+              <li>
+                การสื่อสารงาน: เพื่อความเข้าใจตรงกัน
+                ขอแนะนำให้ลูกค้าแนบภาพตัวอย่าง (Reference) หรือภาพประกอบ
+                (Composition) ที่ต้องการมาประกอบการอธิบายรายละเอียดงาน
+              </li>
+              <li>
+                ขั้นตอนการทำงานและการชำระเงิน:
+                <ul class="list-disc2">
+                  <li>
+                    ลูกค้าชำระเงินมัดจำจำนวนครึ่งหนึ่งของค่าใช้จ่ายทั้งหมด
+                    ก่อนเริ่มดำเนินการวาดภาพ
+                  </li>
+                  <li>
+                    เมื่อได้รับเงินมัดจำ ผู้วาดจะส่งภาพร่าง (Sketch)
+                    ให้ลูกค้าตรวจสอบ
+                  </li>
+                  <li>เมื่อลูกค้าอนุมัติภาพร่าง ลูกค้าชำระเงินส่วนที่เหลือ</li>
+                  <li>
+                    ผู้วาดจะเริ่มดำเนินการวาดภาพจนเสร็จสมบูรณ์และส่งมอบผลงานให้ลูกค้า
+                  </li>
+                </ul>
+              </li>
+              <li>
+                เงื่อนไขการยกเลิกงาน: ในกรณีที่ลูกค้าต้องการยกเลิกงานกลางคัน
+                ผู้วาดขอสงวนสิทธิ์ในการไม่คืนเงิน
+                เนื่องจากถือเป็นค่าใช้จ่ายในการเตรียมการ และดำเนินการวาดภาพ
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Profile -->
+        <div id="Profile">
+          <!-- Header Profile -->
+          <div class="flex flex-col items-center pt-10">
+            <img
+              class="w-24 h-24 mb-3 rounded-full shadow-lg"
+              src="assets/images/Kazeichi.jpg"
+              alt="Kazeichi"
+            />
+            <h5 class="mb-1 text-xl font-medium text-black text-center">
+              Kazeichi Commission
+            </h5>
+            <span class="text-sm text-gray-500">Artist</span>
+          </div>
+
+          <!-- Status Indicator -->
+          <ul role="list" class="max-w-sm mx-auto">
+            <li class="py-3 py-4">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-semibold text-gray-900 truncate">
+                    Commission Status
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  <span class="w-2 h-2 me-1 bg-green-500 rounded-full"></span>
+                  Open
+                </span>
+                <!-- <span
+            class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+            <span class="w-2 h-2 me-1 bg-red-500 rounded-full"></span>
+            Closed
+          </span> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Prices -->
+        <div id="Prices" class="hidden pb-4">
+          <!-- Header Price-->
+          <div class="flex flex-col items-center pt-10">
+            <h5 class="athiti mb-1 text-xl font-medium text-black text-center">
+              ราคาเริ่มต้น
+            </h5>
+            <span class="text-sm text-gray-500">Prices</span>
+          </div>
+
+          <!-- General Scale Gallery -->
+          <div class="grid gap-4 py-4">
+            <!-- Large Image Display -->
+            <div>
+              <img
+                id="General-Gallery"
+                class="h-auto w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                alt="Large Image"
+              />
+            </div>
+
+            <!-- Thumbnail Carousel -->
+            <div class="relative flex items-center gap-2">
+              <!-- Previous Button -->
+              <button
+                id="prev-button"
+                class="absolute left-2 z-10 bg-[#dcd1c3] text-white p-2 gap-2 rounded-full top-1/2 transform -translate-y-1/2"
+              >
+                &lt;
+              </button>
+
+              <!-- Thumbnail List -->
+              <!-- Max 5 List Image -->
+              <div
+                class="flex justify-center overflow-hidden w-full px-4 sm:px-12"
+              >
+                <div
+                  id="thumbnail-list"
+                  class="flex gap-2 transition-transform duration-300 justify-center"
+                >
+                  <img
+                    class="h-16 w-16 rounded-lg border-2 border-transparent cursor-pointer"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                    alt="Thumbnail 1"
+                  />
+                  <img
+                    class="h-16 w-16 rounded-lg border-2 border-transparent cursor-pointer"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                    alt="Thumbnail 2"
+                  />
+                  <img
+                    class="h-16 w-16 rounded-lg border-2 border-transparent cursor-pointer"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                    alt="Thumbnail 3"
+                  />
+                  <img
+                    class="h-16 w-16 rounded-lg border-2 border-transparent cursor-pointer"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                    alt="Thumbnail 4"
+                  />
+                  <img
+                    class="h-16 w-16 rounded-lg border-2 border-transparent cursor-pointer"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                    alt="Thumbnail 5"
+                  />
+                </div>
+              </div>
+
+              <!-- Next Button -->
+              <button
+                id="next-button"
+                class="absolute right-2 z-10 bg-[#dcd1c3] text-white p-2 gap-2 rounded-full top-1/2 transform -translate-y-1/2"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
+          <!-- General Scale -->
+          <div class="relative">
+            <div class="flex justify-center">
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden w-full sm:max-w-md md:max-w-2xl lg:max-w-4xl p-4 sm:p-6"
+              >
+                <h5
+                  class="athiti mb-1 text-xl font-medium text-black text-center"
+                >
+                  General Scale
+                </h5>
+                <div class="overflow-x-auto">
+                  <table
+                    class="min-w-full text-sm sm:text-base text-left rtl:text-right text-gray-800"
+                  >
+                    <thead class="text-xs sm:text-sm uppercase">
+                      <tr>
+                        <th scope="col" class="px-4 sm:px-6 py-3">Type</th>
+                        <th scope="col" class="px-4 sm:px-6 py-3">Sketch</th>
+                        <th scope="col" class="px-4 sm:px-6 py-3">
+                          Base Color
+                        </th>
+                        <th scope="col" class="px-4 sm:px-6 py-3">
+                          Full Color
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        >
+                          Bust Up
+                        </th>
+                        <td class="px-4 sm:px-6 py-4">100</td>
+                        <td class="px-4 sm:px-6 py-4">250</td>
+                        <td class="px-4 sm:px-6 py-4">450</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        >
+                          Half Body
+                        </th>
+                        <td class="px-4 sm:px-6 py-4">200</td>
+                        <td class="px-4 sm:px-6 py-4">320</td>
+                        <td class="px-4 sm:px-6 py-4">600</td>
+                      </tr>
+                      <tr class="bg-white">
+                        <th
+                          scope="row"
+                          class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        >
+                          Knee Up
+                        </th>
+                        <td class="px-4 sm:px-6 py-4">-</td>
+                        <td class="px-4 sm:px-6 py-4">370</td>
+                        <td class="px-4 sm:px-6 py-4">800</td>
+                      </tr>
+                      <tr class="bg-white">
+                        <th
+                          scope="row"
+                          class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        >
+                          Full Body
+                        </th>
+                        <td class="px-4 sm:px-6 py-4">-</td>
+                        <td class="px-4 sm:px-6 py-4">450</td>
+                        <td class="px-4 sm:px-6 py-4">1000+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description General -->
+            <div class="text-start athiti max-w-sm mx-auto py-4">
+              <div class="font-semibold">หมายเหตุเพิ่มเติม</div>
+              <ul class="list-inside list-disc md:list-disc">
+                <li>Sketch เพิ่มตัวละคร + 50B ทุกขนาด</li>
+                <li>Base color, Full color ทุกขนาด + ครึ่งนึงของราคาเต็ม</li>
+                <li>ไม่รับวาดพื้นหลัง แต่สามารถเลือกสีพื้นหลังได้</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Chibi Gallery -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- Chibi -->
+          <div class="relative pt-10">
+            <div class="flex justify-center">
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden w-full sm:max-w-md md:max-w-2xl lg:max-w-4xl p-4 sm:p-6"
+              >
+                <h5
+                  class="athiti mb-1 text-xl font-medium text-black text-center"
+                >
+                  Chibi
+                </h5>
+                <div class="overflow-x-auto">
+                  <table
+                    class="min-w-full text-sm sm:text-base text-left rtl:text-right text-gray-800"
+                  >
+                    <thead class="text-xs sm:text-sm uppercase">
+                      <tr>
+                        <th scope="col" class="px-4 sm:px-6 py-3">Type</th>
+                        <th scope="col" class="px-4 sm:px-6 py-3">
+                          Base Color
+                        </th>
+                        <th scope="col" class="px-4 sm:px-6 py-3">
+                          Full Color
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        >
+                          Chibi
+                        </th>
+                        <td class="px-4 sm:px-6 py-4">100</td>
+                        <td class="px-4 sm:px-6 py-4">200</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Description Chibi -->
+            <div class="text-start athiti max-w-sm mx-auto py-4">
+              <div class="font-semibold">หมายเหตุเพิ่มเติม</div>
+              <ul class="list-inside list-disc md:list-disc">
+                <li>เพิ่มตัวละคร + ครึ่งนึงของราคาเต็ม</li>
+                <li>ไม่รับวาดพื้นหลัง แต่สามารถเลือกสีพื้นหลังได้</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div>
+            <div class="flex flex-col items-center pt-10 pb-4">
+              <div class="athiti font-semibold">ช่องทางชำระเงิน</div>
+              <span class="text-sm text-gray-500">Payment methods</span>
+            </div>
+            <div class="flex mx-auto justify-center">
+              <img
+                class="px-4 w-24 max-w-lg rounded-lg"
+                src="assets/svg/PromptPay.svg"
+                alt="PromptPay"
+              />
+              <img
+                class="px-4 w-24 max-w-lg rounded-lg"
+                src="assets/svg/Truemoneywallet.svg"
+                alt="Truemoney Wallet"
+              />
+            </div>
+            <!-- Description Payment Methods -->
+            <div class="text-start athiti max-w-sm mx-auto pt-4">
+              <div class="text-sm">
+                หมายเหตุ : รับชำระเงินผ่านช่องทางธนาคาร พร้อมเพย์
+                และทรูมันนี่วอลเลต
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contanct -->
+        <hr class="mx-10 border-gray-300" />
+        <div class="flex flex-col items-center pb-4 pt-4">
+          <p class="mb-1 text-lg text-black text-center">Social Media</p>
+          <div class="flex flex-wrap justify-center gap-5 mt-4">
+            <a
+              href="https://www.facebook.com/Pepperoni.453547"
+              class="text-gray-500 hover:text-gray-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                width="24"
+                height="24"
+                viewBox="0 0 8 19"
+                class="w-4 h-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a
+              href="https://bsky.app/profile/forestblue.bsky.social"
+              class="text-gray-500 hover:text-gray-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M12 10.8c-1.087 -2.114 -4.046 -6.053 -6.798 -7.995C2.566 0.944 1.561 1.266 0.902 1.565 0.139 1.908 0 3.08 0 3.768c0 0.69 0.378 5.65 0.624 6.479 0.815 2.736 3.713 3.66 6.383 3.364 0.136 -0.02 0.275 -0.039 0.415 -0.056 -0.138 0.022 -0.276 0.04 -0.415 0.056 -3.912 0.58 -7.387 2.005 -2.83 7.078 5.013 5.19 6.87 -1.113 7.823 -4.308 0.953 3.195 2.05 9.271 7.733 4.308 4.267 -4.308 1.172 -6.498 -2.74 -7.078a8.741 8.741 0 0 1 -0.415 -0.056c0.14 0.017 0.279 0.036 0.415 0.056 2.67 0.297 5.568 -0.628 6.383 -3.364 0.246 -0.828 0.624 -5.79 0.624 -6.478 0 -0.69 -0.139 -1.861 -0.902 -2.206 -0.659 -0.298 -1.664 -0.62 -4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"
+                />
+              </svg>
+              <span class="sr-only">Bluesky</span>
+            </a>
+            <a
+              href="https://toyhou.se/Sun_sHine"
+              class="text-gray-500 hover:text-gray-900"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 197.72693 190.30197"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <g transform="translate(6.2923729,-54.858845)">
+                  <path
+                    d="M -6.2923729,154.22213 92.377447,54.858845 121.69053,84.093271 V 69.076617 h 31.14565 v 46.273543 l 38.59837,38.59837 h -32.36923 v 91.21228 H 25.02776 v -91.10105 z"
+                  />
+                  <path
+                    d="m 54.338047,170.6337 v 8.39821 H 70.80075 v 53.94872 h 11.012215 v -54.00434 h 17.920872 c 0,0 2.72e-4,-0.23357 2.72e-4,2.12606 v 51.91208 h 8.966631 v -29.12162 h 26.03469 v 28.76768 h 9.28125 v -61.66526 h -8.96663 v 25.72008 h -26.42796 l 0.22247,-26.09986 z"
+                    fill="#fff"
+                  />
+                </g>
+              </svg>
+              <span class="sr-only">ToyHou.se</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/scripts.js" type="text/javascript"></script>
+</html>
+
+<!-- Author : Kitt-N -->
+<!-- Kazeichi have license for publish -->

@@ -1,0 +1,58 @@
+/* Author : Kitt-N  */
+/* Kazeichi have license for publish */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Athiti&display=swap");
+
+.athiti {
+  font-family: "Athiti", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #dcd1c3;
+  font-family: "Anonymous Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul.list-disc {
+  list-style-type: circle;
+}
+ul.list-disc2 {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  
+th,td {
+    border-bottom: 1px solid gray;
+    padding: 12px;
+    text-align: center;
+}
+
+#thumbnail-container {
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#thumbnail-list {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+#thumbnail-list img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+}
+
+#thumbnail-list img:hover {
+  border: 2px solid #dcd1c3;
+}
+
+.brown{
+  border: 2px solid#483C32;
+}
